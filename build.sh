@@ -5,14 +5,40 @@
 # it converts the component placement CSV data to a new format.
 
 # --- Configuration ---
-# Set the project and output file names
-PROJECT_FILE="Template.kicad_pro"
+# Find the project file automatically. This script assumes there is only one .kicad_pro file.
+PROJECT_FILE=$(ls *.kicad_pro 2>/dev/null)
+
+# Check if a project file was found.
+if [ -z "$PROJECT_FILE" ]; then
+    echo "❌ Error: No .kicad_pro file found in the current directory." >&2
+    exit 1
+fi
+
+# Check if multiple project files were found.
+if [ $(echo "$PROJECT_FILE" | wc -w) -gt 1 ]; then
+    echo "❌ Error: Multiple .kicad_pro files found in this directory:" >&2
+    echo "$PROJECT_FILE" >&2
+    echo "Please ensure only one .kicad_pro file is present." >&2
+    exit 1
+fi
+
+# Extract project name to check if it's the default.
+PROJECT_NAME=$(basename -s .kicad_pro "$PROJECT_FILE")
+
+# Set other file and directory names
 JOBSET_FILE="Build.kicad_jobset"
 RAW_POS_FILE="build/positions_raw-all-pos"
 OUTPUT_POS_FILE="build/positions.csv"
 BUILD_DIR="build"
 
 # --- Main Logic ---
+
+# Check for default project name and issue a warning if found.
+if [ "$PROJECT_NAME" = "Template" ]; then
+    echo "⚠️  Warning: The project name is still 'Template'."
+    echo "   It is recommended to rename the project files before proceeding."
+    echo # Add a newline for readability.
+fi
 
 # Ensure the build directory exists where outputs will be placed.
 mkdir -p "$BUILD_DIR"
