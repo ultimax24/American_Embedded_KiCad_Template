@@ -8,17 +8,17 @@ This repository contains a KiCad project template provided by American Embedded.
 
 ## Features
 
-*   **Standardized Layers:** Pre-defined layer setup for consistency across projects.
-*   **Manufacturing Outputs:** Includes a `Build.kicad_jobset` file for generating common manufacturing files like Gerbers, drill files, BOMs, and 3D models.
+*   **Manufacturing Outputs:** Includes a `Build.kicad_jobset` file for generating common manufacturing data for JLCPCB, NextPCB
 *   **Build Script:** A `build.sh` script is provided to automate the process of running the jobset and formatting the component placement file.
-*   **Project Structure:** A clean and organized directory structure.
 
 ## Usage
 
-1.  Use this repository as a template for a new KiCad project.
-2.  Rename the `Template.kicad_*` files to match your project name.
-3.  Modify the schematic and PCB as needed for your design.
-4.  Run the build script to generate manufacturing outputs.
+Use this repository as a template directly in KiCad.
+
+1.  In the KiCad project manager, select **File > New Project from Template...**
+2.  Navigate to the directory containing this repository.
+3.  KiCad will prompt for a project name and handle all file renaming automatically.
+4.  You can then begin your design work as usual.
 
 ## Building
 
@@ -31,7 +31,7 @@ To generate all the output files, run the provided shell script:
 This script will:
 1.  Execute the KiCad CLI to run the jobs defined in `Build.kicad_jobset`.
 2.  Place all generated files into the `build/` directory.
-3.  Convert the raw component placement file into a more user-friendly CSV format (`build/positions.csv`).
+3.  Convert the raw component placement file into supported format
 
 The `Build.kicad_jobset` is configured to output:
 - ERC and DRC reports
